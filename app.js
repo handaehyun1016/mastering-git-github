@@ -18,3 +18,15 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
+
+//...app.js
+  
+const index = require('./routes/index');
+//const app = express();
+ 
+//app.use('/', index);
+ 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+ 
+app.engine('ejs', require('ejs').__express);
